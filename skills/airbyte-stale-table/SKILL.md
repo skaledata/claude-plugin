@@ -16,8 +16,10 @@ with a prefix, such as `mcp__plugin_skaledata_skaledata__airbyte_list_jobs`.
 
 The `airbyte_*` tools act for the person who signed in. They refuse API keys.
 If a tool answers "Airbyte tools need a person signed in through an AI client
-such as Claude", the connection uses an API key: stop, say so, and point the
-person to https://docs.skaledata.com/connect-claude.
+such as Claude", the connection uses an API key, not the person's sign-in:
+stop, say so, and tell the person to sign in from `/mcp` (select the
+`skaledata` server, then Authenticate), as
+https://docs.skaledata.com/claude-code-plugin describes.
 
 Airbyte has no per-user roles. Anyone who can open the app can use every
 tool, including the ones that delete data in the destination. That makes the

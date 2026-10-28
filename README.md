@@ -21,28 +21,27 @@ At the Claude Code prompt:
 /plugin install skaledata@skaledata
 ```
 
-Then start Claude Code with an org-wide SkaleData API key that has the `full`
-scope in `SKALEDATA_API_KEY`:
-
-```bash
-export SKALEDATA_API_KEY=sdk_...
-claude
-```
-
-`/mcp` lists the `skaledata` server once it's connected.
+Then sign in: run `/mcp`, pick the `skaledata` server, and choose
+**Authenticate**. Your browser opens SkaleData's sign-in; sign in, choose the
+organization Claude Code acts in, and allow the connection. `/mcp` then lists
+the `skaledata` server as connected, and every tool runs as you, with your own
+roles. No API key is needed.
 
 ## What's in it
 
 | Path                                  | What it is                                                                                 |
 | ------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `.mcp.json`                           | The gateway as a streamable HTTP MCP server, with `SKALEDATA_API_KEY` as the bearer token. |
+| `.mcp.json`                           | The gateway as a streamable HTTP MCP server; Claude Code signs you in with OAuth.          |
 | `skills/airflow-failed-run/SKILL.md`  | The Airflow workflow.                                                                      |
 | `skills/airbyte-stale-table/SKILL.md` | The Airbyte workflow.                                                                      |
 | `.claude-plugin/plugin.json`          | The plugin manifest.                                                                       |
 | `.claude-plugin/marketplace.json`     | Makes this folder a one-plugin marketplace.                                                |
 
-The Airflow and Airbyte tools act as a signed-in person, and refuse API keys.
-See the docs page for what that means in Claude Code today.
+The Airflow, Airbyte and DataHub tools act as the signed-in person and refuse
+API keys, which is why the plugin signs you in instead of taking a key. For CI
+and other headless use, add the gateway with an org-wide API key as
+[Connect other MCP clients with an API key](https://docs.skaledata.com/mcp-api-keys)
+describes; those tools then stay off.
 
 ## Develop
 

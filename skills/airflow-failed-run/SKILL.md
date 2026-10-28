@@ -17,8 +17,10 @@ with a prefix, such as `mcp__plugin_skaledata_skaledata__airflow_list_dags`.
 The `airflow_*` tools act as the person who signed in, with that person's own
 Airflow role for the app. They refuse API keys. If a tool answers "Airflow
 tools need a person signed in through an AI client such as Claude", the
-connection uses an API key: stop, say so, and point the person to
-https://docs.skaledata.com/connect-claude. Don't look for another way in.
+connection uses an API key, not the person's sign-in: stop, say so, and tell
+the person to sign in from `/mcp` (select the `skaledata` server, then
+Authenticate), as https://docs.skaledata.com/claude-code-plugin describes.
+Don't look for another way in.
 
 If every tool answers "MCP data egress is disabled for this organization",
 an org admin has to turn on **Allow MCP data egress** in the SkaleData

@@ -11,7 +11,7 @@
     {
       "name": "skaledata",
       "source": "./",
-      "description": "Connect Claude Code to your SkaleData organization's MCP gateway, with skills for diagnosing a failed Airflow run and checking the Airbyte sync behind a stale table."
+      "description": "Connect Claude Code to your SkaleData organization's MCP gateway as yourself, with skills for diagnosing a failed Airflow run and checking the Airbyte sync behind a stale table."
     }
   ]
 }
