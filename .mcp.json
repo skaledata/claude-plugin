@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "skaledata": {
+      "type": "http",
+      "url": "https://mcp.skaledata.run/mcp",
+      "headers": {
+        "Authorization": "Bearer ${SKALEDATA_API_KEY}"
+      }
+    }
+  }
+}

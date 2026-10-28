@@ -1,0 +1,17 @@
+{
+  "name": "skaledata",
+  "owner": {
+    "name": "SkaleData",
+    "url": "https://skaledata.com"
+  },
+  "metadata": {
+    "description": "SkaleData's Claude Code plugin: the MCP gateway connection and workflow skills for Airflow and Airbyte."
+  },
+  "plugins": [
+    {
+      "name": "skaledata",
+      "source": "./",
+      "description": "Connect Claude Code to your SkaleData organization's MCP gateway, with skills for diagnosing a failed Airflow run and checking the Airbyte sync behind a stale table."
+    }
+  ]
+}
